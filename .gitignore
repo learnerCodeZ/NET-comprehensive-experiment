@@ -1,0 +1,15 @@
+# Build outputs
+bin/*.exe
+bin/*.obj
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/*.bat
+.vscode/*.ps1
+.vscode/settings.local.json
