@@ -5,7 +5,9 @@
       "Bash(mkdir -p /d/MYCODE/NET_comprehensive_experiment/docs /d/MYCODE/NET_comprehensive_experiment/src /d/MYCODE/NET_comprehensive_experiment/bin)",
       "Bash(touch /d/MYCODE/NET_comprehensive_experiment/bin/.gitkeep)",
       "Bash(powershell *)",
-      "Bash(cmd.exe *)"
+      "Bash(cmd.exe *)",
+      "Bash(git -C /d/MYCODE/NET_comprehensive_experiment add -A)",
+      "Bash(git -C /d/MYCODE/NET_comprehensive_experiment commit -m ' *)"
     ]
   }
 }
