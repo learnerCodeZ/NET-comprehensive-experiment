@@ -49,7 +49,13 @@
 
 ## .exe 文件是怎么生成的（编译过程）
 
-`server.c` 源码 → `server.exe` 可执行文件，经过 4 步：
+`.exe` 不是写完 `.c` 就有的，需要执行**编译命令**才会生成：
+
+```
+写代码(server.c) → 手动执行编译命令 → 生成.exe
+```
+
+### 编译过程（4 步）
 
 | 步骤 | 工具 | 做什么 |
 |------|------|------|
@@ -58,7 +64,8 @@
 | 3. 汇编 | 汇编器 | 将汇编转为机器码（`.obj`） |
 | 4. 链接 | 链接器 | 把 `.obj` 和 `ws2_32.lib` 合并，生成 `.exe` |
 
-**本项目编译命令**：
+### 本项目编译命令
+
 ```
 cl /EHsc /Fe:bin\server.exe src\server.c ws2_32.lib
 ```
@@ -66,4 +73,11 @@ cl /EHsc /Fe:bin\server.exe src\server.c ws2_32.lib
 - `/Fe:bin\server.exe`：指定输出文件路径
 - `ws2_32.lib`：链接 Windows 网络库（Winsock）
 
-编译产物：`bin/server.exe`（可直接双击运行的程序）
+**执行命令后**，才会生成 `bin/server.exe`。不执行命令，`.c` 文件只是文本，不会变成程序。
+
+### 编译产物
+
+```
+bin/server.exe   ← 最终可执行程序
+bin/server.obj   ← 中间产物（机器码，未链接）
+```
