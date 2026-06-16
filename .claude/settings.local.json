@@ -7,7 +7,10 @@
       "Bash(powershell *)",
       "Bash(cmd.exe *)",
       "Bash(git -C /d/MYCODE/NET_comprehensive_experiment add -A)",
-      "Bash(git -C /d/MYCODE/NET_comprehensive_experiment commit -m ' *)"
+      "Bash(git -C /d/MYCODE/NET_comprehensive_experiment commit -m ' *)",
+      "Bash(git -C /d/MYCODE/NET_comprehensive_experiment config http.sslBackend openssl)",
+      "Bash(git -C /d/MYCODE/NET_comprehensive_experiment config http.postBuffer 524288000)",
+      "Bash(git -C /d/MYCODE/NET_comprehensive_experiment push -u origin main)"
     ]
   }
 }
