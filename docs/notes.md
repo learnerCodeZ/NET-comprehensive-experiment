@@ -81,3 +81,15 @@ cl /EHsc /Fe:bin\server.exe src\server.c ws2_32.lib
 bin/server.exe   ← 最终可执行程序
 bin/server.obj   ← 中间产物（机器码，未链接）
 ```
+
+### 本项目实际编译过程
+
+1. 写完 `server.c` 后，需要手动执行编译命令才能生成 `.exe`
+2. 本项目使用 **MSVC**（cl.exe），编译器路径 `D:\VS2022\VC\Tools\MSVC\...\cl.exe`
+3. 编译前需先执行 `vcvarsall.bat x64` 配置 MSVC 环境
+4. 执行编译命令：
+   ```
+   call "D:\VS2022\VC\Auxiliary\Build\vcvarsall.bat" x64
+   cl /EHsc /Fe:bin\server.exe src\server.c ws2_32.lib
+   ```
+5. 命令执行后，才会在 `bin/` 目录下生成 `server.exe` 和 `server.obj`
